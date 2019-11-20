@@ -100,6 +100,7 @@
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="UI\Login.aspx" />
     <Content Include="UI\Registros\RMesas.aspx" />
+    <Content Include="UI\Registros\RReserva.aspx" />
     <Content Include="UI\Registros\RUsuario.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -132,6 +133,13 @@
     </Compile>
     <Compile Include="UI\Registros\RMesas.aspx.designer.cs">
       <DependentUpon>RMesas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\RReserva.aspx.cs">
+      <DependentUpon>RReserva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\RReserva.aspx.designer.cs">
+      <DependentUpon>RReserva.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\Registros\RUsuario.aspx.cs">
       <DependentUpon>RUsuario.aspx</DependentUpon>

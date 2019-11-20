@@ -117,5 +117,7 @@ namespace EventsDWF.UI.Registros
 				Utilitarios.Utils.ShowToastr(this, "Elimino con exito", "Exito", "success");
 			}
 		}
+
+		
 	}
 }

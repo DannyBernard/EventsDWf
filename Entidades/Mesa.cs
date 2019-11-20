@@ -14,6 +14,7 @@ namespace Entities
 		public int CantidadPersonas { get; set; }
 		public decimal Precio  { get; set; }
 		public int Cantidad { get; set; }
+		public DateTime Fecha { get; set; }
 
 		public Mesa()
 		{
@@ -22,15 +23,17 @@ namespace Entities
 			CantidadPersonas = 0;
 			Precio = 0;
 			Cantidad = 0;
+			Fecha = DateTime.Now;
 		}
 
-		public Mesa(int mesaId, int numeroMesa, int cantidadPersonas,decimal precio,int cantidad )
+		public Mesa(int mesaId, int numeroMesa, int cantidadPersonas,decimal precio,int cantidad, DateTime fecha )
 		{
 			MesaId = mesaId;
 			NumeroMesa = numeroMesa;
 			CantidadPersonas = cantidadPersonas;
 			Precio = precio;
 			Cantidad = cantidad;
+			Fecha = fecha;
 		}
 	}
 }

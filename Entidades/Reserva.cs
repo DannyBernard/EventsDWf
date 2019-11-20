@@ -9,12 +9,15 @@ namespace Entities
 	public class Reserva
 	{
 		[Key]
-		public int ReservaId{ get; set; }
+		public int ReservaId { get; set; }
 		public string Nombre { get; set; }
 		public DateTime Fecha { get; set; }
-		public string Usuario { get; set; }
-		public decimal Total  { get; set; }
-		public int NumeroMesa { get; set; }
+		public int UsuarioID { get; set; }
+
+		public decimal Total { get; set; }
+		public decimal Monto { get; set; }
+		public int MesaID { get; set; }
+
 
 		public virtual List<ReservaDetalle> Detalle { get; set; }
 
@@ -23,25 +26,28 @@ namespace Entities
 			ReservaId = 0;
 			Nombre = string.Empty;
 			Fecha = DateTime.Now;
-			Usuario = string.Empty;
+			UsuarioID = 0;
+
 			Total = 0;
-			NumeroMesa = 0;
+			Monto = 0;
+			MesaID = 0;
 			Detalle = new List<ReservaDetalle>();
 		}
 
-		public Reserva(int reservaId, string nombre, DateTime fecha, string usuario, decimal total, int numeroMesa,List<ReservaDetalle> detalle)
+		public Reserva(int reservaId, string nombre, DateTime fecha, int usuario, decimal total, int mesaID, List<ReservaDetalle> detalle)
 		{
 			ReservaId = reservaId;
 			Nombre = nombre;
 			Fecha = fecha;
-			Usuario = usuario;
+			UsuarioID = usuario;
 			Total = total;
-			NumeroMesa = numeroMesa;
-			this.Detalle = detalle;	}
+	    	MesaID = mesaID;
+			this.Detalle = detalle;
+		}
 
-		public void AgregarDetalle(int reservaDetalleId, int reservaID, int mesaId, int cantidad, decimal precio, DateTime fecha)
+		public void AgregarDetalle(int reservaDetalleId, int reservaID, int cantidad, decimal precio, DateTime fecha)
 		{
-			this.Detalle.Add(new ReservaDetalle( reservaDetalleId,reservaID, mesaId, cantidad, precio, fecha));
+			this.Detalle.Add(new ReservaDetalle(reservaDetalleId, reservaID, cantidad, precio));
 		}
 
 		public void RemoveDetalle(int Idex)

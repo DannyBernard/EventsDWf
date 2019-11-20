@@ -55,7 +55,7 @@
 							<div class="form-group">
 								<label style="text-align:left" class="col-sm-2 control-label" for="txtmobile">Fecha: </label>
 								<div class="col-sm-10">
-									<asp:TextBox class="form-control" TextMode="Date" ID="FechaTextBox" placeholder="Ingrese el Email" Enabled="true"  runat="server"></asp:TextBox>
+										<asp:TextBox class="form-control" TextMode="Date" ID="FechaTextBox" placeholder=" " Enabled="true"  runat="server"></asp:TextBox>
 								</div>
 								</div>
 							<div class="form-group">

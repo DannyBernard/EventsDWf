@@ -11,8 +11,17 @@ namespace EventsDWF.UI.Registros
 {
 
 
-	public partial class RMesas
+	public partial class RReserva
 	{
+
+		/// <summary>
+		/// FechaTextBox control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.TextBox FechaTextBox;
 
 		/// <summary>
 		/// IDTexBox control.
@@ -33,31 +42,31 @@ namespace EventsDWF.UI.Registros
 		protected global::System.Web.UI.WebControls.Button BuscarButton;
 
 		/// <summary>
-		/// NumeromesaTextBox control.
+		/// NombreTextBox control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.TextBox NumeromesaTextBox;
+		protected global::System.Web.UI.WebControls.TextBox NombreTextBox;
 
 		/// <summary>
-		/// Numeromesa control.
+		/// NumeroMesaDropdownList control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.RequiredFieldValidator Numeromesa;
+		protected global::System.Web.UI.WebControls.DropDownList NumeroMesaDropdownList;
 
 		/// <summary>
-		/// CantidadPersonasTextBox control.
+		/// NumeroTextBox control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.TextBox CantidadPersonasTextBox;
+		protected global::System.Web.UI.WebControls.TextBox NumeroTextBox;
 
 		/// <summary>
 		/// CantidadTextBox control.
@@ -78,13 +87,40 @@ namespace EventsDWF.UI.Registros
 		protected global::System.Web.UI.WebControls.TextBox PrecioTextBox;
 
 		/// <summary>
-		/// FechaTextBox control.
+		/// AddButton control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.TextBox FechaTextBox;
+		protected global::System.Web.UI.WebControls.Button AddButton;
+
+		/// <summary>
+		/// DatosGridView control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.GridView DatosGridView;
+
+		/// <summary>
+		/// TotalTextBox control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.TextBox TotalTextBox;
+
+		/// <summary>
+		/// CntTextBox control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.TextBox CntTextBox;
 
 		/// <summary>
 		/// NuevoButton control.
