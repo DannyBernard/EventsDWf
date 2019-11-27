@@ -15,22 +15,22 @@ namespace EventsDWF.UI
 	{
 
 		/// <summary>
-		/// txtmobile control.
+		/// Usertext control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.TextBox txtmobile;
+		protected global::System.Web.UI.WebControls.TextBox Usertext;
 
 		/// <summary>
-		/// txtpwd control.
+		/// pwdText control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.TextBox txtpwd;
+		protected global::System.Web.UI.WebControls.TextBox pwdText;
 
 		/// <summary>
 		/// btnLogin control.

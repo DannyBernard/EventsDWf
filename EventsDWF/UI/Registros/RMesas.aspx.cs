@@ -15,18 +15,18 @@ namespace EventsDWF.UI.Registros
 		{
 			if (!Page.IsPostBack)
 			{
-				FechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
+				FechaLabel.Text = DateTime.Now.ToString("dd MMMM yyyy");
 
 			}
 		}
 		public void LlenaCampo(Mesa mesa)
 		{
 			IDTexBox.Text = mesa.MesaId.ToString();
-			NumeromesaTextBox.Text = mesa.NumeroMesa.ToString();
+			
 			CantidadPersonasTextBox.Text = mesa.CantidadPersonas.ToString(); ;
-			PrecioTextBox.Text = mesa.NumeroMesa.ToString() ;
-			FechaTextBox.Text = mesa.Fecha.ToString("yyyy-MM-dd");
-		
+			PrecioTextBox.Text = mesa.Precio.ToString();
+			//FechaLabel.Text = mesa.Fecha.ToString("yyyy-MM-dd");
+
 
 		}
 
@@ -34,11 +34,11 @@ namespace EventsDWF.UI.Registros
 		{
 			Mesa mesa = new Mesa();
 			mesa.MesaId = Utilitarios.Utils.ToInt(IDTexBox.Text);
-			mesa.NumeroMesa = Utilitarios.Utils.ToInt(NumeromesaTextBox.Text);
+			mesa.Precio = Utilitarios.Utils.ToDecimal(PrecioTextBox.Text);
 			mesa.CantidadPersonas = Utilitarios.Utils.ToInt(CantidadPersonasTextBox.Text);
 			mesa.Cantidad = Utilitarios.Utils.ToInt(CantidadTextBox.Text);
-			mesa.Fecha = Utilitarios.Utils.ToDateTime(FechaTextBox.Text);
-		
+			mesa.Fecha = Utilitarios.Utils.ToDateTime(FechaLabel.Text);
+
 
 			return mesa;
 		}
@@ -46,11 +46,11 @@ namespace EventsDWF.UI.Registros
 		protected void Limpiar()
 		{
 			IDTexBox.Text = "";
-			NumeromesaTextBox.Text = "";
-			CantidadPersonasTextBox.Text ="";
+		
+			CantidadPersonasTextBox.Text = "";
 			PrecioTextBox.Text = "";
-			FechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
-			
+			FechaLabel.Text = DateTime.Now.ToString("dd MMMM yyyy");
+
 		}
 
 
@@ -66,6 +66,50 @@ namespace EventsDWF.UI.Registros
 			else
 			{
 				Utilitarios.Utils.ShowToastr(this.Page, "Usuario No Exite", "Error", "warning");
+			}
+		}
+
+		protected void NuevoButton_Click(object sender, EventArgs e)
+		{
+			Limpiar();
+		}
+
+		protected void GuardarButton_Click(object sender, EventArgs e)
+		{
+			RepositorioBase<Mesa> repositorioBase = new RepositorioBase<Mesa>();
+			Mesa mesa = LlenaClase();
+			bool paso = false;
+
+			if (mesa.MesaId == 0)
+				paso = repositorioBase.Guardar(mesa);
+			else
+				paso = repositorioBase.Modificar(mesa);
+
+			if (paso)
+			{
+				Utilitarios.Utils.ShowToastr(this, "Guardo con exito", "Exito", "success");
+				Limpiar();
+			}
+			else
+			{
+				Utilitarios.Utils.ShowToastr(this, "No Guardo", "Error", "warning");
+			}
+		}
+
+		protected void EliminarButton_Click(object sender, EventArgs e)
+		{
+
+			RepositorioBase<Mesa> repositorio = new RepositorioBase<Mesa>();
+			int id = Utilitarios.Utils.ToInt(IDTexBox.Text);
+			var mesa = repositorio.Buscar(id);
+			if (mesa == null)
+			{
+				Utilitarios.Utils.ShowToastr(this, " Usuario no exite", "Error", "warning");
+			}
+			else
+			{
+				repositorio.Eliminar(id);
+				Utilitarios.Utils.ShowToastr(this, "Elimino con exito", "Exito", "success");
 			}
 		}
 	}

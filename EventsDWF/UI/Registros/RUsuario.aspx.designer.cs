@@ -15,6 +15,15 @@ namespace EventsDWF.UI.Registros
 	{
 
 		/// <summary>
+		/// FechaLabel control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.Label FechaLabel;
+
+		/// <summary>
 		/// IDTexBox control.
 		/// </summary>
 		/// <remarks>
@@ -42,6 +51,15 @@ namespace EventsDWF.UI.Registros
 		protected global::System.Web.UI.WebControls.TextBox NombreTextBox;
 
 		/// <summary>
+		/// RequiredFieldValidator2 control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+
+		/// <summary>
 		/// UserTextBox control.
 		/// </summary>
 		/// <remarks>
@@ -49,6 +67,15 @@ namespace EventsDWF.UI.Registros
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
 		protected global::System.Web.UI.WebControls.TextBox UserTextBox;
+
+		/// <summary>
+		/// RequiredFieldValidator control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator;
 
 		/// <summary>
 		/// PasswordTextBox control.
@@ -60,6 +87,15 @@ namespace EventsDWF.UI.Registros
 		protected global::System.Web.UI.WebControls.TextBox PasswordTextBox;
 
 		/// <summary>
+		/// RequiredFieldValidator1 control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+
+		/// <summary>
 		/// TipoTextBox control.
 		/// </summary>
 		/// <remarks>
@@ -67,6 +103,15 @@ namespace EventsDWF.UI.Registros
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
 		protected global::System.Web.UI.WebControls.TextBox TipoTextBox;
+
+		/// <summary>
+		/// RequiredFieldValidator3 control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
 
 		/// <summary>
 		/// EmailTextBox control.
@@ -78,13 +123,13 @@ namespace EventsDWF.UI.Registros
 		protected global::System.Web.UI.WebControls.TextBox EmailTextBox;
 
 		/// <summary>
-		/// FechaTextBox control.
+		/// RequiredFieldValidator4 control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.TextBox FechaTextBox;
+		protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
 
 		/// <summary>
 		/// NuevoButton control.

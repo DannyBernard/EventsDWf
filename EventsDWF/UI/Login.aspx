@@ -17,13 +17,13 @@
 							<div class="form-group">
 								<label class="col-sm-2 control-label" for="txtmobile">User: </label>
 								<div class="col-sm-10">
-									<asp:TextBox class="form-control" ID="txtmobile" placeholder="Digite el usuario" runat="server"></asp:TextBox>
+									<asp:TextBox class="form-control" ID="Usertext" placeholder="Digite el usuario" runat="server"></asp:TextBox>
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="col-sm-2 control-label" for="txtpwd">Password: </label>
 								<div class="col-sm-10">
-									<asp:TextBox class="form-control" ID="txtpwd" TextMode="Password" placeholder="Digite la Password" runat="server" ></asp:TextBox>
+									<asp:TextBox class="form-control" ID="pwdText" TextMode="Password" placeholder="Digite la Password" runat="server" ></asp:TextBox>
 								</div>
 							</div>
 							<div class="form-group">
@@ -33,7 +33,7 @@
 							</div>
 							<div class="form-group">
 								<div class="col-sm-offset-2 col-sm-10">
-									<asp:Button CssClass="btn btn-success" ID="btnLogin" runat="server" Text="Login"></asp:Button>
+									<asp:Button CssClass="btn btn-success" ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click"></asp:Button>
 									<asp:Button CssClass="btn btn-danger" ID="Salir" runat="server" Text="Salir"></asp:Button>
 								</div>
 							</div>

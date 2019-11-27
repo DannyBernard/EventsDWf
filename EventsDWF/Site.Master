@@ -40,25 +40,36 @@
 
 						 <a class=" dropdown-toggle " data-toggle="dropdown" style="font-family: Arial; font-size: 16px"><span class="glyphicon glyphicon-plus-sign "></span> Registros<span class=" caret "></span></a>
 						<ul class="dropdown-menu" style="font-family: Arial; font-size: 16px">
-							<li><a href="#">Registros Usuarios </a></li>
-							<li><a href="#">Registro Mesas</a></li>
-							<li><a href="#">Registro Reservs</a></li>
+							<li><a href="/UI/Registros/RUsuario.aspx">Registros Usuarios </a></li>
+							<li><a href="/UI/Registros/RMesas.aspx">Registro Mesas</a></li>
+							<li><a href="/UI/Registros/RReserva.aspx">Registro Reserva</a></li>
 
 						</ul>
 					</li>
 					<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" style="font-family: Arial; font-size: 16px"><span class="glyphicon glyphicon-folder-open"></span>  Consultas<span class="caret"></span></a>
 						<ul class="dropdown-menu" style="font-family: Arial; font-size: 16px">
-							<li><a href="/UI/Consultas/Canalisis.aspx">Consultar </a></li>
+							<li><a href="/UI/Consulta/CReserva.aspx">Consultar Reserva </a></li>
+							<li><a href="/UI/Consulta/CMesa.aspx">Consultar Mesa  </a></li>
+							<li><a href="/UI/Consulta/CUsuario.aspx">Consultar Usuario  </a></li>
 							
 						</ul>
 					</li>
 					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" style="font-family:Arial; font-size:16px" href="#" ><span class=" glyphicon glyphicon-user"></span> Login</a>
+				
+						<a class="dropdown-toggle" data-toggle="dropdown" style="font-family:Arial; font-size:16px" href="UI/Login.aspx" ><span class=" glyphicon glyphicon-user"></span> Login</a>
+									<ul class="dropdown-menu" style="font-family: Arial; font-size: 16px">
+										<li><a href="/UI/Login.aspx">Login</a></li>
+									</ul>
+						
 				</li>
 						
-					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" style="font-family:Arial; font-size:16px" href="#" ><span class="glyphicon glyphicon-plus-sign"></span> Logout</a>
+					<li class="dropdown" >
+						<a class="dropdown-toggle" data-toggle="dropdown" style="font-family:Arial; font-size:16px"  href="UI/Registros/RUsuario.aspx" ><span class="glyphicon glyphicon-plus-sign"></span> Logout</a>
+									<ul class="dropdown-menu" style="font-family: Arial; font-size: 16px">
+										<li><a href="UI/Registros/RUsuario.aspx.cs">Registro Usuario</a></li>
+									</ul>
+						
 				</li>
 				</ul>
 			</div>

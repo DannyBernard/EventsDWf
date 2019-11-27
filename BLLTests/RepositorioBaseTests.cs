@@ -24,6 +24,21 @@ namespace BLL.Tests
 			usuario.Fecha = DateTime.Now;
 			RepositorioBase<Usuario> repositorio = new RepositorioBase<Usuario>();
 			Assert.IsTrue(repositorio.Guardar(usuario));
+			//Mesa
+			Mesa mesa = new Mesa();
+			mesa.CantidadPersonas = 5;
+			mesa.Precio = 120;
+			usuario.Fecha = DateTime.Now;
+			RepositorioBase<Mesa> repositorio1 = new RepositorioBase<Mesa>();
+			Assert.IsTrue(repositorio1.Guardar(mesa));
+			//Reserva
+			Reserva reserva = new Reserva();
+			reserva.Nombre = "Danny";
+			
+			RepositorioBase<Reserva> repositorio2 = new RepositorioBase<Reserva>();
+			Assert.IsTrue(repositorio2.Guardar(reserva));
+
+
 		}
 
 		[TestMethod()]

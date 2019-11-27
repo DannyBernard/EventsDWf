@@ -15,13 +15,13 @@ namespace EventsDWF.UI.Registros
 	{
 
 		/// <summary>
-		/// FechaTextBox control.
+		/// FechaLabel control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.TextBox FechaTextBox;
+		protected global::System.Web.UI.WebControls.Label FechaLabel;
 
 		/// <summary>
 		/// IDTexBox control.
@@ -51,22 +51,13 @@ namespace EventsDWF.UI.Registros
 		protected global::System.Web.UI.WebControls.TextBox NombreTextBox;
 
 		/// <summary>
-		/// NumeroMesaDropdownList control.
+		/// RequiredFieldValidator control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.DropDownList NumeroMesaDropdownList;
-
-		/// <summary>
-		/// NumeroTextBox control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.TextBox NumeroTextBox;
+		protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator;
 
 		/// <summary>
 		/// CantidadTextBox control.
@@ -78,6 +69,24 @@ namespace EventsDWF.UI.Registros
 		protected global::System.Web.UI.WebControls.TextBox CantidadTextBox;
 
 		/// <summary>
+		/// RequiredFieldValidator2 control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+
+		/// <summary>
+		/// NumeroMesaDropdownList control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.DropDownList NumeroMesaDropdownList;
+
+		/// <summary>
 		/// PrecioTextBox control.
 		/// </summary>
 		/// <remarks>
@@ -85,6 +94,15 @@ namespace EventsDWF.UI.Registros
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
 		protected global::System.Web.UI.WebControls.TextBox PrecioTextBox;
+
+		/// <summary>
+		/// RequiredFieldValidator3 control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
 
 		/// <summary>
 		/// AddButton control.

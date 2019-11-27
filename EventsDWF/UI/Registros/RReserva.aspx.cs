@@ -2,9 +2,6 @@
 using Entities;
 using EventsDWF.Utilitarios;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -15,7 +12,7 @@ namespace EventsDWF.UI.Registros
 		
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			FechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
+			FechaLabel.Text = DateTime.Now.ToString("dd MMMM yyyy");
 			if (!Page.IsPostBack)
 			{
 				//si llego in id
@@ -48,6 +45,8 @@ namespace EventsDWF.UI.Registros
 			reserva.Nombre = NombreTextBox.Text;
 			reserva.MesaID = NumeroMesaDropdownList.SelectedValue.Length;
 			reserva.Fecha = DateTime.Now;
+			reserva.Total = Utils.ToDecimal(TotalTextBox.Text);
+			reserva.Monto = Utils.ToDecimal(PrecioTextBox.Text);
 			
 			reserva.Total = 0;
 			
@@ -57,8 +56,7 @@ namespace EventsDWF.UI.Registros
 		{
 			IDTexBox.Text = string.Empty;
 			NumeroMesaDropdownList.ClearSelection();
-			NumeroTextBox.Text = string.Empty;
-			FechaTextBox.Text = DateTime.Now.ToString();
+			FechaLabel.Text = DateTime.Now.ToString("dd MMMM yyyy");
 			PrecioTextBox.Text = 0.ToString();
 		    ViewState["Reserva"] = new Reserva();
 			LlenarCombo();
@@ -68,9 +66,9 @@ namespace EventsDWF.UI.Registros
 		{
 			Limpiar();
 			IDTexBox.Text = reserva.ReservaId.ToString();
-			NumeroMesaDropdownList.SelectedValue = reserva.MesaID.ToString();
+			NumeroMesaDropdownList.DataSource = reserva.MesaID.ToString();
 			PrecioTextBox.Text = reserva.Monto.ToString();
-			FechaTextBox.Text = reserva.Fecha.ToString();
+			//FechaLabel.Text = reserva.Fecha.ToString();
 			
 			ViewState["Reserva"] = reserva;
 			//CalcularMonto();
@@ -84,10 +82,21 @@ namespace EventsDWF.UI.Registros
 			RepositorioBase<Mesa> repositorio = new RepositorioBase<Mesa>();
 			NumeroMesaDropdownList.DataSource = repositorio.GetList(x => true);
 			NumeroMesaDropdownList.DataValueField = "MesaId";
-			NumeroMesaDropdownList.DataTextField = "NumeroMesa";
+		    NumeroMesaDropdownList.DataTextField = "MesaId";
 		    NumeroMesaDropdownList.DataBind();
-		
 
+
+		}
+		/*
+		protected void NumeroMesaDropdownList_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			if (NumeroMesaDropdownList.Items.Count > 0)
+			{
+				RepositorioBase<Mesa> repositorio = new RepositorioBase<Mesa>();
+				Mesa mesa = repositorio.Buscar(Utils.ToInt(NumeroMesaDropdownList.SelectedValue));
+				PrecioTextBox.Text = mesa.Precio.ToString();
+				repositorio.Dispose();
+			}
 
 		}
 		/**
@@ -131,7 +140,7 @@ namespace EventsDWF.UI.Registros
 			int totalc=0;
 			Reserva reserva = new Reserva();
 			reserva = (Reserva)ViewState["Reserva"];
-			reserva.AgregarDetalle(0, Utils.ToInt(IDTexBox.Text),Utils.ToInt(CantidadTextBox.Text),Utils.ToDecimal(PrecioTextBox.Text),Utils.ToDateTime(FechaTextBox.Text));
+			reserva.AgregarDetalle(0, Utils.ToInt(IDTexBox.Text),NombreTextBox.Text,Utils.ToInt(NumeroMesaDropdownList.SelectedValue),Utils.ToInt(CantidadTextBox.Text),Utils.ToDecimal(PrecioTextBox.Text),Utils.ToDateTime(FechaLabel.Text));
 			ViewState["Reserva"] = reserva;
 			this.BindGrid();
 
@@ -149,7 +158,7 @@ namespace EventsDWF.UI.Registros
 			}
 			CntTextBox.Text = totalc.ToString();
 		}
-		int ctn;
+		//int ctn;
 		protected void RemoveLinkButton_Click(object sender, EventArgs e)
 		{
 			if (DatosGridView.Rows.Count > 0 && DatosGridView.SelectedIndex >= 0)
@@ -207,10 +216,7 @@ namespace EventsDWF.UI.Registros
 			}
 		}
 
-		protected void NumeroMesaDropdownList_SelectedIndexChanged(object sender, EventArgs e)
-		{
-
-		}
+	
 
 		protected void EliminarButton_Click(object sender, EventArgs e)
 		{
@@ -232,5 +238,7 @@ namespace EventsDWF.UI.Registros
 				Utils.ShowToastr(this.Page, "No Elimino", "Erorror");
 
 		}
+
+		
 	}
 	}

@@ -13,8 +13,7 @@ namespace Entities
 		public string Nombre { get; set; }
 		public DateTime Fecha { get; set; }
 		public int UsuarioID { get; set; }
-
-		public decimal Total { get; set; }
+        public decimal Total { get; set; }
 		public decimal Monto { get; set; }
 		public int MesaID { get; set; }
 
@@ -45,9 +44,9 @@ namespace Entities
 			this.Detalle = detalle;
 		}
 
-		public void AgregarDetalle(int reservaDetalleId, int reservaID, int cantidad, decimal precio, DateTime fecha)
+		public void AgregarDetalle(int reservaDetalleId, int reservaID,string Nombre,int numeroMesa, int cantidad, decimal precio, DateTime fecha)
 		{
-			this.Detalle.Add(new ReservaDetalle(reservaDetalleId, reservaID, cantidad, precio));
+			this.Detalle.Add(new ReservaDetalle(reservaDetalleId, reservaID,Nombre,numeroMesa, cantidad, precio));
 		}
 
 		public void RemoveDetalle(int Idex)

@@ -1,11 +1,7 @@
 ﻿using BLL;
 using Entities;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace EventsDWF.UI.Registros
 {
@@ -15,7 +11,7 @@ namespace EventsDWF.UI.Registros
 		{
 			if (!Page.IsPostBack)
 			{
-				FechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
+				FechaLabel.Text = DateTime.Now.ToString("dd MMMM yyyy");
 
 			}
 		}
@@ -28,7 +24,7 @@ namespace EventsDWF.UI.Registros
 			PasswordTextBox.Text = usuario.Password;
 			EmailTextBox.Text = usuario.Email;
 			TipoTextBox.Text = usuario.Tipo.ToString();
-			FechaTextBox.Text = usuario.Fecha.ToString("yyyy-MM-dd");
+		//	FechaLabel.Text = usuario.Fecha.ToString("yyyy-MM-dd");
 
 		}
 
@@ -41,7 +37,7 @@ namespace EventsDWF.UI.Registros
 			usuario.Email = EmailTextBox.Text;
            usuario.Password = PasswordTextBox.Text;
 			usuario.Tipo = Utilitarios.Utils.ToChar(TipoTextBox.Text);
-			usuario.Fecha = Utilitarios.Utils.ToDateTime(FechaTextBox.Text);
+			usuario.Fecha = Utilitarios.Utils.ToDateTime(FechaLabel.Text);
 
 			return usuario;
 		}
@@ -53,7 +49,7 @@ namespace EventsDWF.UI.Registros
 			UserTextBox.Text = "";
 			PasswordTextBox.Text = "";
 			TipoTextBox.Text = "";
-			FechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
+			FechaLabel.Text = DateTime.Now.ToString("dd MMMM yyyy");
 			EmailTextBox.Text = "";
 		}
 

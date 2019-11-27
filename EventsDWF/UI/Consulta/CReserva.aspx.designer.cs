@@ -7,30 +7,39 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EventsDWF.UI.Registros
+namespace EventsDWF.UI.Consulta
 {
 
 
-	public partial class RMesas
+	public partial class CReserva
 	{
 
 		/// <summary>
-		/// FechaLabel control.
+		/// ScriptManager1 control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.Label FechaLabel;
+		protected global::System.Web.UI.ScriptManager ScriptManager1;
 
 		/// <summary>
-		/// IDTexBox control.
+		/// BuscarPorDropDownList control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.TextBox IDTexBox;
+		protected global::System.Web.UI.WebControls.DropDownList BuscarPorDropDownList;
+
+		/// <summary>
+		/// FiltroTextBox control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.TextBox FiltroTextBox;
 
 		/// <summary>
 		/// BuscarButton control.
@@ -42,84 +51,48 @@ namespace EventsDWF.UI.Registros
 		protected global::System.Web.UI.WebControls.Button BuscarButton;
 
 		/// <summary>
-		/// CantidadPersonasTextBox control.
+		/// fechaCheckBox control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.TextBox CantidadPersonasTextBox;
+		protected global::System.Web.UI.WebControls.CheckBox fechaCheckBox;
 
 		/// <summary>
-		/// CantidadPersonas control.
+		/// DesdeTextBox control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.RequiredFieldValidator CantidadPersonas;
+		protected global::System.Web.UI.WebControls.TextBox DesdeTextBox;
 
 		/// <summary>
-		/// CantidadTextBox control.
+		/// HastaTextBox control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.TextBox CantidadTextBox;
+		protected global::System.Web.UI.WebControls.TextBox HastaTextBox;
 
 		/// <summary>
-		/// RequiredFieldValidator1 control.
+		/// DatosGridView control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+		protected global::System.Web.UI.WebControls.GridView DatosGridView;
 
 		/// <summary>
-		/// PrecioTextBox control.
+		/// ReportReserva control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.TextBox PrecioTextBox;
-
-		/// <summary>
-		/// RequiredFieldValidator2 control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
-
-		/// <summary>
-		/// NuevoButton control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.Button NuevoButton;
-
-		/// <summary>
-		/// GuardarButton control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.Button GuardarButton;
-
-		/// <summary>
-		/// EliminarButton control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.Button EliminarButton;
+		protected global::Microsoft.Reporting.WebForms.ReportViewer ReportReserva;
 	}
 }
